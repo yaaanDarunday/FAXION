@@ -163,7 +163,9 @@
             </div>
             <div class="bottom-right">
                 <p>SEND US AN EMAIL</p>
-                <form action="#" method="POST">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+
                     <div class="name">
                         <div class="firstNameGroup">
                             <label for="fname" class="form-label">First Name</label><br>
@@ -174,6 +176,7 @@
                             <input type="text" id="lname" name="last_name" class="form-input" required>
                         </div>
                     </div>
+
                     <div class="Pcontacts">
                         <div class="emailGroup">
                             <label for="email" class="form-label">Email</label><br>
@@ -184,13 +187,15 @@
                             <input type="tel" id="phone" name="phone" class="form-input" required>
                         </div>
                     </div>
+
                     <label for="message" class="form-label">Message</label><br>
                     <textarea id="message" name="message" rows="5" class="form-textarea" required></textarea>
+
                     <br>
 
                     <button type="submit" class="form-button">Send Message</button>
-
                 </form>
+
             </div>
         </div>
     </section>
