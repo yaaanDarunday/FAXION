@@ -163,9 +163,14 @@
             </div>
             <div class="bottom-right">
                 <p>SEND US AN EMAIL</p>
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="contact">
-
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="e004e42e-18ea-4d89-bde8-42314dfe0b8f">
+                    
+                    <!-- Redirect to success page after submit -->
+                    <input type="hidden" name="redirect" value="/success.html">
+                    
+                    <!-- Your form fields -->
                     <div class="name">
                         <div class="firstNameGroup">
                             <label for="fname" class="form-label">First Name</label><br>
@@ -192,13 +197,8 @@
                     <textarea id="message" name="message" rows="5" class="form-textarea" required></textarea>
 
                     <br>
-
-                    <input type="hidden" name="form-name" value="contact">
-                    <input type="hidden" name="redirect" value="/success.html">
-
                     <button type="submit" class="form-button">Send Message</button>
                 </form>
-
             </div>
         </div>
     </section>
